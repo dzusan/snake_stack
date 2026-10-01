@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "tasks":
+  [
+      {
+          "label": "Build",
+          "type": "shell",
+          "command": "cmake . -B bin && make -j16 -C bin",
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          },
+          "problemMatcher": [
+              "$gcc"
+          ]
+      },
+      {
+        "label": "Clean",
+        "type": "shell",
+        "command": "rm -r ${workspaceFolder}/bin/*",
+        "problemMatcher": [],
+        "presentation": {
+            "reveal": "always",
+          }
+      },
+      {
+        "label": "Mass erase (ST-Flash)",
+        "type": "shell",
+        "command": "st-flash erase && st-flash reset",
+        "problemMatcher": [],
+        "presentation": {
+            "reveal": "always",
+        }
+      },
+      {
+        "label": "Read full chip (ST-Flash)",
+        "type": "shell",
+        "command": "st-flash read ${workspaceFolder}/build/chip_read.bin 0x08000000 0x200000",
+        "problemMatcher": [],
+        "presentation": {
+            "reveal": "always",
+        }
+      }
+  ]
+}

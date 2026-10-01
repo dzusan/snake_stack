@@ -1,0 +1,38 @@
+{
+    "configurations": [
+        {
+            "name": "vscode_stm32_c_cpp_properties",
+            "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+            "includePath": [
+                "${workspaceRoot}/lib/libopencm3/include",
+                "${workspaceRoot}/lib/libopencm3/include/libopencmsis",
+                "${workspaceRoot}/lib/libopencm3/lib/stm32/f7",
+                "${workspaceRoot}/lib/libopencm3/lib/stm32/common",
+
+                "${workspaceRoot}/lib/threadx/ports/cortex_m7/gnu/inc",
+                "${workspaceRoot}/lib/threadx/ports/cortex_m7/gnu/src",
+                "${workspaceRoot}/lib/threadx/common/src",
+                "${workspaceRoot}/lib/threadx/common/inc",
+                
+                "${workspaceRoot}/lib/lwip/src/include",
+                
+                "${workspaceRoot}/src",
+                "${workspaceRoot}/src/arch",
+                "${workspaceRoot}/src/http",
+                "${workspaceRoot}/src/ip",
+                "${workspaceRoot}/src/periph",
+                "${workspaceRoot}/src/rttp",
+                "${workspaceRoot}/src/time"
+            ],
+            "defines": [
+                "DSTM32F7",
+                "STM32F7"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64",
+            "forcedInclude": ["${workspaceFolder}/.vscode/supress-warnings.h"]
+        }
+    ],
+    "version": 4
+}

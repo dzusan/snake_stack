@@ -1,0 +1,9 @@
+[submodule "lib/libopencm3"]
+	path = lib/libopencm3
+	url = https://github.com/libopencm3/libopencm3
+[submodule "lib/lwip"]
+	path = lib/lwip
+	url = https://git.savannah.gnu.org/git/lwip.git
+[submodule "lib/threadx"]
+	path = lib/threadx
+	url = git@github.com:azure-rtos/threadx.git
